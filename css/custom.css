@@ -1120,10 +1120,11 @@ header.main-header .header-sticky.active {
 
 .zigzag-timeline {
     position: relative;
-    padding: 60px 0;
+    padding: 180px 0;
     /* reduced overall height */
     background: url('../images/home1.jpg') no-repeat center center / cover;
     overflow: hidden;
+    height: 450px;
 }
 
 /* Dark overlay for text readability */
