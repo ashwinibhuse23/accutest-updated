@@ -249,7 +249,7 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 0px;
     width: 20px;
     height: 20px;
     background-image: url('../images/arrow-primary.svg');
@@ -259,6 +259,7 @@ body {
     transform: translateY(-50%);
     transition: all 0.4s ease-in-out;
     z-index: 1;
+    margin-right: 5px;
 }
 
 .btn-default:hover::before {
@@ -1564,7 +1565,7 @@ header.main-header .header-sticky.active {
 .why-choose-us-box {
     display: flex;
     align-items: flex-start;
-    gap: 1px;
+    gap: 30px;
     justify-content: space-between;
 }
 
@@ -1721,7 +1722,6 @@ header.main-header .header-sticky.active {
 
 .why-choose-item-content h3 {
     font-size: 16px;
-    font-weight: 500;
     text-transform: capitalize;
 
     margin: 0;
