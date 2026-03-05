@@ -1,0 +1,167 @@
+/* ===============================
+   GLOBAL RESET
+=================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===============================
+   MAIN SECTION
+=================================*/
+
+.job-details-section {
+    padding: 80px 20px;
+}
+
+.details-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+/* ===============================
+   JOB CARD STYLE
+=================================*/
+
+.job-detail {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+    transition: 0.3s ease;
+    display: none;
+}
+
+.job-detail:hover {
+    transform: translateY(-5px);
+}
+.job-detail.active {
+    display: block;
+}
+/* ===============================
+   HEADINGS
+=================================*/
+
+.job-detail h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0d3b66;
+}
+
+.job-location {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.job-detail h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111;
+}
+
+/* ===============================
+   PARAGRAPH & LIST
+=================================*/
+
+.job-detail p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #444;
+}
+
+.job-detail ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.job-detail ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* ===============================
+   APPLY FORM
+=================================*/
+
+.apply-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.apply-form input,
+.apply-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background: #fafafa;
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus {
+    border-color: #0d3b66;
+    outline: none;
+    background: #ffffff;
+}
+
+.apply-form textarea {
+    resize: vertical;
+}
+
+/* FILE INPUT */
+
+.apply-form input[type="file"] {
+    background: #ffffff;
+    padding: 10px;
+}
+
+/* BUTTON */
+
+.apply-form button {
+    padding: 14px;
+    background: #0d3b66;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.apply-form button:hover {
+    background: #08273f;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+
+@media (max-width: 768px) {
+
+    .job-detail {
+        padding: 30px;
+    }
+
+    .job-detail h2 {
+        font-size: 22px;
+    }
+
+}

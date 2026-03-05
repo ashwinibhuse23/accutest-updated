@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/carrerForm.css">
+</head>
+<body>
+  <section class="job-details-section" id="jobDetails">
+
+    <div class="details-container">
+
+        <!-- JOB 1 -->
+        <div class="job-detail" id="job1">
+            <h2>Clinical Research Associate</h2>
+            <p class="job-location">Location: Pune | Full Time | On-site</p>
+
+            <h4>Job Overview</h4>
+            <p>
+                Responsible for monitoring clinical trials, ensuring compliance with protocols,
+                regulatory requirements, and maintaining data integrity.
+            </p>
+
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li>Monitor clinical trial sites</li>
+                <li>Ensure regulatory compliance</li>
+                <li>Prepare monitoring reports</li>
+                <li>Coordinate with investigators</li>
+            </ul>
+
+            <h4>Requirements</h4>
+            <ul>
+                <li>Bachelor’s degree in Life Sciences</li>
+                <li>2+ years clinical monitoring experience</li>
+                <li>Strong documentation skills</li>
+            </ul>
+
+            <h4>Apply Now</h4>
+            <form class="apply-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea rows="4" placeholder="Cover Letter"></textarea>
+                <input type="file">
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+
+        <!-- JOB 2 -->
+        <div class="job-detail" id="job2">
+            <h2>Medical Laboratory Scientist</h2>
+            <p class="job-location">Location: Mumbai | Full Time | On-site</p>
+
+            <h4>Job Overview</h4>
+            <p>
+                Conduct laboratory tests, analyze samples, and ensure accurate medical reporting.
+            </p>
+
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li>Perform diagnostic tests</li>
+                <li>Maintain lab equipment</li>
+                <li>Document test results</li>
+            </ul>
+
+            <h4>Requirements</h4>
+            <ul>
+                <li>BSc / MSc in Medical Laboratory Technology</li>
+                <li>1+ years lab experience</li>
+            </ul>
+
+            <h4>Apply Now</h4>
+            <form class="apply-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea rows="4" placeholder="Cover Letter"></textarea>
+                <input type="file">
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+
+        <!-- JOB 3 -->
+        <div class="job-detail" id="job3">
+            <h2>Pharmacovigilance Officer</h2>
+            <p class="job-location">Location: Hyderabad | Full Time | Hybrid</p>
+
+            <h4>Job Overview</h4>
+            <p>
+                Monitor drug safety data, assess adverse events, and ensure regulatory compliance.
+            </p>
+
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li>Review safety reports</li>
+                <li>Signal detection & risk analysis</li>
+                <li>Maintain safety database</li>
+            </ul>
+
+            <h4>Requirements</h4>
+            <ul>
+                <li>Pharmacy / Life Science graduate</li>
+                <li>Experience in pharmacovigilance</li>
+            </ul>
+
+            <h4>Apply Now</h4>
+            <form class="apply-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea rows="4" placeholder="Cover Letter"></textarea>
+                <input type="file">
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+
+
+
+
+    </div>
+</section>  
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const jobId = params.get("job");
+
+    const allJobs = document.querySelectorAll(".job-detail");
+
+    if (jobId) {
+        const jobElement = document.getElementById(jobId);
+        if (jobElement) {
+            jobElement.classList.add("active");
+        } else {
+            allJobs[0].classList.add("active"); // fallback
+        }
+    } else {
+        allJobs[0].classList.add("active"); // default show first job
+    }
+</script>
+</body>
+</html>

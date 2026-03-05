@@ -533,60 +533,60 @@ items1.forEach(item => {
    COUNTER + PROGRESS + VIDEO
 ========================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    let counterStarted = false;
-    let progressStarted = false;
+//     let counterStarted = false;
+//     let progressStarted = false;
 
-    const counters = document.querySelectorAll(".counter");
-    const progressBars = document.querySelectorAll(".progress-bar");
-    const aboutSection = document.querySelector(".about-premium");
+//     const counters = document.querySelectorAll(".counter");
+//     const progressBars = document.querySelectorAll(".progress-bar");
+//     const aboutSection = document.querySelector(".about-premium");
 
-    function startAnimations() {
+//     function startAnimations() {
 
-        const sectionTop = aboutSection.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
+//         const sectionTop = aboutSection.getBoundingClientRect().top;
+//         const screenHeight = window.innerHeight;
 
-        if (sectionTop < screenHeight - 100) {
+//         if (sectionTop < screenHeight - 100) {
 
-            /* COUNTER ANIMATION */
-            if (!counterStarted) {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute("data-target");
-                    let count = 0;
-                    const increment = target / 100;
+//             /* COUNTER ANIMATION */
+//             if (!counterStarted) {
+//                 counters.forEach(counter => {
+//                     const target = +counter.getAttribute("data-target");
+//                     let count = 0;
+//                     const increment = target / 100;
 
-                    const updateCounter = () => {
-                        if (count < target) {
-                            count += increment;
-                            counter.innerText = Math.ceil(count);
-                            setTimeout(updateCounter, 20);
-                        } else {
-                            counter.innerText = target + "+";
-                        }
-                    };
+//                     const updateCounter = () => {
+//                         if (count < target) {
+//                             count += increment;
+//                             counter.innerText = Math.ceil(count);
+//                             setTimeout(updateCounter, 20);
+//                         } else {
+//                             counter.innerText = target + "+";
+//                         }
+//                     };
 
-                    updateCounter();
-                });
+//                     updateCounter();
+//                 });
 
-                counterStarted = true;
-            }
+//                 counterStarted = true;
+//             }
 
-            /* PROGRESS BAR ANIMATION */
-            if (!progressStarted) {
-                progressBars.forEach(bar => {
-                    bar.style.width = bar.getAttribute("data-width");
-                });
+//             /* PROGRESS BAR ANIMATION */
+//             if (!progressStarted) {
+//                 progressBars.forEach(bar => {
+//                     bar.style.width = bar.getAttribute("data-width");
+//                 });
 
-                progressStarted = true;
-            }
+//                 progressStarted = true;
+//             }
 
-        }
-    }
+//         }
+//     }
 
-    window.addEventListener("scroll", startAnimations);
+//     window.addEventListener("scroll", startAnimations);
 
-});
+// });
 
 
 
@@ -654,38 +654,38 @@ function revealOnScroll() {
         }
     });
 
-    // Custom Arrow Controls
-    document.querySelector(".next-arrow").addEventListener("click", function () {
-        swiper.slideNext();
-    });
+//     // Custom Arrow Controls
+//     document.querySelector(".next-arrow").addEventListener("click", function () {
+//         swiper.slideNext();
+//     });
 
-    document.querySelector(".prev-arrow").addEventListener("click", function () {
-        swiper.slidePrev();
-    });
-
-
- document.getElementById("year").textContent = new Date().getFullYear();
+//     document.querySelector(".prev-arrow").addEventListener("click", function () {
+//         swiper.slidePrev();
+//     });
 
 
+//  document.getElementById("year").textContent = new Date().getFullYear();
 
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const cards = document.querySelectorAll(".why-card");
 
-    cards.forEach(card => {
-        card.addEventListener("mousemove", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-            // Remove active from all cards
-            cards.forEach(c => c.classList.remove("active-card"));
+//     const cards = document.querySelectorAll(".why-card");
 
-            // Add active to clicked card
-            this.classList.add("active-card");
+//     cards.forEach(card => {
+//         card.addEventListener("mousemove", function () {
 
-        });
-    });
+//             // Remove active from all cards
+//             cards.forEach(c => c.classList.remove("active-card"));
 
-});
+//             // Add active to clicked card
+//             this.classList.add("active-card");
+
+//         });
+//     });
+
+// });
 
 
 
